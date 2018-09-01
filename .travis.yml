@@ -1,0 +1,14 @@
+language: generic
+
+services:
+  - docker
+
+env:
+  - DOCKER_IMAGE_REPO=londonappdev/nginx-django-uwsgi-proxy
+
+jobs:
+  include:
+    - stage: "Build"
+      if: branch = master AND type = push
+      name: "Build and push docker image"
+      script: bash ./ci/build_push_docker
