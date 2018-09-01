@@ -1,2 +1,3 @@
-# nginx-uwsgi-proxy
-NGINX container to use as a proxy for an uWSGI app
+# NGINX Django uWSGI Proxy
+
+NGINX container designed to forward requests to a Django app running on uWSGI.
